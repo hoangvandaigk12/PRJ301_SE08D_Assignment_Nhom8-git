@@ -1,0 +1,211 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.main {
+    /*    border: 3px solid #58257b;*/
+    background-color: #e9d8f4;  
+    width: 80%;
+    margin-left: 10%;
+}
+
+.body {
+    width: 100%
+}
+
+.title {
+    /*    border: 3px solid #58257b;*/
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+.title h1 {
+    border-bottom: 3px solid #58257b;
+    width: 300px;
+    padding: 5px;
+    color: #58257b;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50px;
+}
+.table1 {
+    margin-top: 25px;
+    margin-left: 5%;
+    width: 90%;
+}
+.table1 th {
+    font-size: 25px;
+    text-align: center;
+}
+.table1 td {
+    font-size: 20px;
+    text-align: center;
+}
+.td {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+}
+.td img {
+    width: 80%;
+    border-radius: 4px;
+}
+
+.table1 input[type=submit] {
+    padding: 5px;
+    border: 2px solid #58257b;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    background-color: #58257b;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.table1 td input[type=text] {
+    width: 60%;
+    margin-left: 6%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 25px;
+    box-sizing: border-box;
+    border: 2px solid #58257b;
+    border-radius: 4px;
+    /*  background-color: #58257b;*/
+    color: #58257b;
+    text-align: center;
+    float: left;
+}
+.themgiam {
+/*    border: 2px solid #58257b;*/
+    height: 54px;
+}
+.themgiam a {
+/*    border: 1px solid #58257b;*/
+    margin-bottom: 25px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 7px;
+}
+.themgiam a img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;      
+}
+
+.info {
+    margin-top: 30px;
+    margin-left: 5%;
+    width: 90%;
+    border: 1px solid #58257b;
+    border-radius: 6px;
+    background-color: white;
+}
+.info .table {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 25px;
+/*    border: 2px solid black;*/
+}
+.table tr {
+    width: 100%;
+}
+.table td {
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+.table input[type=text] {
+    width: 90%;
+    padding: 7px;
+    font-size: 25px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    /*  background-color: #58257b;*/
+    text-align: center;
+}
+::placeholder { /* chạy tốt trên Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red !important;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* chạy trên Internet Explorer 10-11 */
+    color: red !important;
+}
+::-ms-input-placeholder { /* chạy trên Microsoft Edge */
+    color: red !important;
+}
+
+.thanhtoan {
+    margin-top: 30px;
+    margin-left: 5%;
+    width: 90%;
+    border: 1px solid #58257b;
+    border-radius: 6px;
+    background-color: white;
+}
+h3 {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: buttonface;
+    margin-top: 0px;
+    font-size: 28px;
+    text-align: left;
+}
+.pay {
+    width: 100%;
+    /*    border: 2px solid black;*/
+}
+.bank {
+    margin-bottom: 15px;
+    width: 100%;
+    /*    border: 2px solid black;    */
+}
+.bank h4 {
+    margin-top: 0px;
+    padding: 5px;
+    /*     border: 2px solid black; */
+    font-size: 30px;
+    text-align: left;
+}
+.bank input[type=radio] {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.bank img {
+    width: 100%;
+    height: 150px;
+}
+.bank .cod {
+    width: 25px;
+    height: 25px;
+}
+
+.donhang {
+    width: 90%;
+    border: 1px solid #58257b;
+    border-radius: 6px;
+    margin-left: 5%;
+    margin-top: 25px;
+    background-color: white;
+    padding: 30px;
+}
+.donhang input[type=submit] {
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid #58257b;
+    border-radius: 4px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #58257b;
+}

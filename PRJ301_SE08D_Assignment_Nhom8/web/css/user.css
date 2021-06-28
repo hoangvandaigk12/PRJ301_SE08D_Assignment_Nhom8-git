@@ -1,0 +1,140 @@
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
+    position: relative;
+}
+
+.main {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #e9d8f4;   
+}
+
+
+.header {
+    width: 100%;
+}
+.title-box {
+    width: 100%;
+    margin: 0 auto;
+}
+.title-box h1 {
+    font-size: 80px;
+    /*border: 2px solid black;*/
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    font-family: Brush Script MT;
+    color: #58257b;
+}
+.topnav {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #58257b;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: #db7093;
+    color: white;
+    font-weight: bold
+}
+
+
+.body {
+    width: 100%;
+}
+.type {
+    width: 100%;
+
+}
+.type1 {
+    margin-top: 25px;
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+.type1 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.type1 h2 {
+    color: #58257b;
+}
+table {
+    margin-top: 25px;
+    width: 100%;
+}
+.test {
+    font-size:30px;
+    font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 700ms infinite;
+
+}
+@keyframes my { 
+    0% { color: #db7093;  } 
+    50% { color: crimson;  }
+    100% { color: #F8CD0A;  } 
+}
+table tr {
+    width: 100%;
+}
+table td {
+    float: top;
+    text-align: center;
+    width: 20%;
+/*    border: 2px solid black;*/
+    font-size: 20px;
+}
+.img {
+    width: 80%;
+}
+table h3 {
+    width: 90%;
+    margin-left: 5%;
+    height: 60px;
+/*    line-height: 60px;*/
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    color: #58257b;
+    text-align: center;
+/*    border: 1px solid black;*/
+}
+input[type=submit] {
+    padding: 5px 15px;
+    box-sizing: border-box;
+    border: 2px solid #58257b;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    background-color: #58257b;
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+
+
