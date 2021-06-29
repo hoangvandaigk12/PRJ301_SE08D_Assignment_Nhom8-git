@@ -1,0 +1,107 @@
+body {
+    width: 100%;
+    /*    height: auto;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-size: cover;*/
+    /*    text-align: center;*/
+}
+body .main {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #e9d8f4;
+    border: 2px solid black;   
+}
+
+.main .searchs {
+    width: 100%;
+/*    border: 2px solid black;*/
+    margin-bottom: 25px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.searchs .search1 {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.search1 h2 {
+    width: 100%;
+    text-align: center;
+    background-color: buttonface;
+}
+.search1 p {
+    /*    border: 1px solid  black;*/
+    padding: 5px 50px;
+    font-size: 20px;
+}
+.search2 {
+    width: 100%;
+    /*    border: 1px solid black;*/
+}
+.search2 [type=text] {
+    width: 30%;
+    padding: 5px 10px;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 50px;
+    border-radius: 25px;
+    background-color: #e9d8f4;
+}
+.search2 [type=submit] {
+    margin-left: 25px;
+    padding: 5px 20px;
+    font-size: 25px;
+    border-radius: 25px;
+    background-color: #58257b;
+    color: white;
+}
+
+.search-result {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 25px;
+    background-color: white;
+}
+.search-result h2 {
+    width: 100%;
+    text-align: center;
+    background-color: buttonface;
+}
+.search-result h3 {
+    text-align: center;
+    color: red;
+}
+.search-result .ketqua {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+.ketqua .flower {
+    width: 30%;
+    margin-left: 2.5%;
+    border: 2px solid green;
+    float: left;
+    margin-top: 25px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.flower img {
+    width: 80%;
+}
+.flower p {
+    margin-top: 5px;
+/*    border: 1px solid black;*/
+}
+.flower a {
+    color: lightseagreen;
+}
+

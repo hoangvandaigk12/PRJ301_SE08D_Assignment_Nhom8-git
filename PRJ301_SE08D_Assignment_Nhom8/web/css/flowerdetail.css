@@ -87,7 +87,7 @@ body {
 .bottom p {
     font-size: 20px;
 }
-input[type=text] {
+.bottom input[type=text] {
     width: 20%;
     padding: 7px;
     font-size: 25px;
@@ -98,7 +98,7 @@ input[type=text] {
     color: #58257b;
     text-align: center;
 }
-input[type=submit] {
+.bottom input[type=submit] {
     padding: 7px;
     margin-left: 25px;
     border: 2px solid #58257b;

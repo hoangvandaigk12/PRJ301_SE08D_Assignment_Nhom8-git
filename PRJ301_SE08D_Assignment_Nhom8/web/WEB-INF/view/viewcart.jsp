@@ -23,6 +23,15 @@
                     Giỏ Hàng
                 </h1>
             </div>
+            <div class="success" style="
+                 <c:if test="${not empty requestScope.success}">
+                     display: block; margin-bottom: 10px; margin-top: 10px;
+                 </c:if>
+                 <c:if test="${empty requestScope.success}">
+                     display: none;
+                 </c:if>">
+                <strong>Bạn Đã Đặt Hàng Thành Công</strong>
+            </div>
             <form action="CartServlet" method="POST">
                 <table class="table1" border="2px solid black">
                     <tr>
@@ -37,7 +46,7 @@
                     <c:if test="${empty cart || cart.size() == 0}">
                         <tr>
                             <td colspan="6" style="text-align: center">
-                                <h1>No item in your cart</h1><br/>
+                                <h1>Không có sản phẩm trong giỏ hàng</h1><br/>
                                 <a href="ListHotFlowerServlet" style="font-size: 25px; margin-bottom: 20px">
                                     Tiếp Tục Mua Sắm
                                 </a>                                       
@@ -129,17 +138,19 @@
                             <tr>
                                 <td style="width: 20%; text-align: left;">*Điạ Chỉ:</td>
                                 <td>
-                                    <input type="text" name="txtAddress" value="${param.txtAddress}"
-                                           <c:set var="emptyAddErr" value="${requestScope.emptyAddErr}"/>
-                                           <c:if test="${not empty emptyAddErr}">
+                                    <input type="text" name="txtAddress"                                           
+                                           <c:if test="${not empty requestScope.emptyAddErr}">
                                                placeholder="Bạn cần điền đầy đủ thông tin!"
+                                           </c:if>
+                                           <c:if test="${empty requestScope.emptyAddErr}">
+                                               value="${param.txtAddress}" readonly=""
                                            </c:if>/>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="width: 20%; text-align: left;">*Ngày Giao Hàng:</td>
                                 <td>
-                                    <input type="text" name="txtDeliveryDate" value=""
+                                    <input type="text" name="txtDeliveryDate"
                                            <c:set var="emptyDateErr" value="${requestScope.emptyDateErr}"/>
                                            <c:if test="${not empty emptyDateErr}">
                                                placeholder="Bạn cần điền đầy đủ thông tin!"
@@ -147,7 +158,10 @@
                                            <c:set var="dateErr" value="${requestScope.dateErr}"/>
                                            <c:if test="${not empty dateErr}">
                                                placeholder="Bạn cần điền theo định dạng (dd-MM-yyyy)!"
-                                           </c:if> />
+                                           </c:if>
+                                           <c:if test="${empty emptyDateErr and empty dateErr}">
+                                               value="${param.txtDeliveryDate}" readonly=""
+                                           </c:if>/>
                                 </td>
                             </tr>
                         </table>

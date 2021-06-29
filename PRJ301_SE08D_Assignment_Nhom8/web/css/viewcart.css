@@ -12,8 +12,19 @@ body {
     margin-left: 10%;
 }
 
-.body {
+/*.body {
     width: 100%
+}*/
+.main .success {
+    width: 90%;
+    margin-left: 5%;
+    background-color: #F4FDF0;
+    padding: 15px;
+    border-radius: 6px;
+}
+.success strong {
+    font-size: 25px;
+    color: darkgreen;
 }
 
 .title {
@@ -130,14 +141,14 @@ body {
     /*  background-color: #58257b;*/
     text-align: center;
 }
-::placeholder { /* chạy tốt trên Chrome, Firefox, Opera, Safari 10.1+ */
+.table ::placeholder { /* chạy tốt trên Chrome, Firefox, Opera, Safari 10.1+ */
     color: red !important;
     opacity: 1; /* Firefox */
 }
-:-ms-input-placeholder { /* chạy trên Internet Explorer 10-11 */
+.table :-ms-input-placeholder { /* chạy trên Internet Explorer 10-11 */
     color: red !important;
 }
-::-ms-input-placeholder { /* chạy trên Microsoft Edge */
+.table ::-ms-input-placeholder { /* chạy trên Microsoft Edge */
     color: red !important;
 }
 

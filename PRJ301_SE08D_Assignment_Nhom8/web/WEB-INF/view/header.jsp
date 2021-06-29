@@ -30,21 +30,70 @@
                 <h1>Bách Hoa Cốc</h1>
             </div>
 
-            <div class="topnav">
-                <a href="#" class="a-box">
-                    <img alt="" src="icons/iconuser.png" style="width: 20px; height: 20px"/><br/>
-                    <c:set var="user" value="${sessionScope.user}"/>
-                    ${user.fullName}
-                </a>
-                <c:url var="url" value="ListHotFlowerServlet"/>
-                <a href="${url}" class="a-box">
-                    <img alt="" src="icons/iconhome.png" style="width: 20px; height: 20px;"/><br/>
-                    Trang chủ
-                </a>
-                <a href="CartServlet" class="a-box">
-                    <img alt="" src="icons/iconcart.png" style="width: 20px; height: 20px"/><br/>
-                    Giỏ hàng
-                </a>
+            <div class="wrapper">
+                <nav class="menu">
+                    <ul class="clearfix">
+
+                        <li>
+                            <a href="#">
+                                <img alt="" src="icons/iconuser.png" style="width: 20px; height: 21px"/>
+                                <c:set var="user" value="${sessionScope.user}"/>
+                                ${user.fullName}
+                                <span class="arrow">&#9660;</span>
+                            </a>
+
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="ProfileFormServlet">
+                                        <img alt="" src="icons/profile.png" style="width: 20px; height: 21px"/>
+                                        Cập nhật hồ sơ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="LogoutServlet">
+                                        <img alt="" src="icons/logout.png" style="width: 20px; height: 21px"/>
+                                        Đăng xuất
+                                    </a>
+                                </li>                           
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="ListHotFlowerServlet">
+                                <img alt="" src="icons/iconhome.png" style="width: 20px; height: 25px;"/>
+                                Trang chủ
+                            </a>
+                        </li>
+                        <li>
+                            <a href="CartServlet">
+                                <img alt="" src="icons/iconcart.png" style="width: 20px; height: 22px"/>
+                                Giỏ hàng
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="icons/flower.png" style="width: 20px; height: 20px"/>   
+                                Chủ Đề
+                                <img src="icons/flower.png" style="width: 20px; height: 20px"/>
+                            </a>
+
+                            <ul class="sub-menu">
+                                <li><a href="ListFlowerServlet?target=hoatinhyeu">Hoa Tình Yêu</a></li>
+                                <li><a href="ListFlowerServlet?target=hoakhaitruong">Hoa Khai Trương</a></li>
+                                <li><a href="ListFlowerServlet?target=hoasinhnhat">Hoa Sinh Nhật</a></li>
+                                <li><a href="ListFlowerServlet?target=hoacuoi">Hoa Cưới</a></li>
+                                <li><a href="ListFlowerServlet?target=hoachiabuon">Hoa Chia Buồn</a></li>
+                            </ul>
+                        </li>
+                        <div class="search-form">
+                            <form action="SearchFlowerServlet" method="POST">
+                                <div class="search-item">
+                                    <input type="text" name="txtSearch" value="" placeholder="Nhập tên hoa"/>
+                                    <input type="submit" value="Search" />
+                                </div>
+                            </form>
+                        </div>
+                    </ul>
+                </nav>
             </div>
 
             <div style="text-align: center; padding: 10px 20px; font-size: 20px">
@@ -82,23 +131,7 @@
                 </a>
             </div>
         </div>
-        <div id="chude">                  
-            <ul>
-                <li class="li1" style="width: 150px;">
-                    <a href="#">
-                        <img src="icons/flower.png" style="width: 20px; height: 20px"/>
-                        Chủ Đề
-                        <img src="icons/flower.png" style="width: 20px; height: 20px"/>
-                    </a>
-                    <ul class="sub-chude">
-                        <li class="li"><a href="ListFlowerServlet?target=hoatinhyeu">Hoa Tình Yêu</a></li>
-                        <li class="li"><a href="ListFlowerServlet?target=hoakhaitruong">Hoa Khai Trương</a></li>
-                        <li class="li"><a href="ListFlowerServlet?target=hoasinhnhat">Hoa Sinh Nhật</a></li>
-                        <li class="li"><a href="ListFlowerServlet?target=hoacuoi">Hoa Cưới</a></li>
-                        <li class="li"><a href="ListFlowerServlet?target=hoachiabuon">Hoa Chia Buồn</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+
+
     </body>
 </html>

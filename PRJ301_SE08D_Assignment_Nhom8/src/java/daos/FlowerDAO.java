@@ -37,7 +37,39 @@ public class FlowerDAO implements Serializable {
             con.close();
         }
     }
-
+    
+        public ArrayList<FlowerDTO> searchFlower(String searchValue) throws SQLException {
+        ArrayList<FlowerDTO> list = null;
+        try {
+            con = DBHelper.makeConnection();
+            if(con != null) {
+                String sql = "Select flowerID, flowerName, description, price, quantity,  image, categoryID\n"
+                        + "From tblFlower\n"
+                        + "Where flowerName Like ?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, "%" + searchValue + "%");
+                rs = stm.executeQuery();
+                list = new ArrayList<>();
+                while(rs.next()) { 
+                    String id = rs.getString("flowerID");
+                    String name = rs.getString("flowerName");
+                    String description = rs.getString("description");
+                    float price = rs.getFloat("price");
+                    int quantity = rs.getInt("quantity");
+                    String image = rs.getString("image");
+                    String cateID = rs.getString("categoryID");
+                    CategoryDAO dao = new CategoryDAO();
+                    CategoryDTO cate = dao.getCategoryByID(cateID);
+                    FlowerDTO flower = new FlowerDTO(id, name, description, price, quantity, image, cate);
+                    list.add(flower);
+                }
+            }
+        } finally {
+            closeConnection();
+        }
+        return list;
+    }
+    
     public FlowerDTO getFlowerDTOByID(String id) throws SQLException {
         FlowerDTO flower = null;
         try {
@@ -49,7 +81,7 @@ public class FlowerDAO implements Serializable {
                 stm = con.prepareStatement(sql);
                 stm.setString(1, id);
                 rs = stm.executeQuery();
-                if(rs.next()) {                    
+                if(rs.next()) {                     
                     String name = rs.getString("flowerName");
                     String description = rs.getString("description");
                     float price = rs.getFloat("price");

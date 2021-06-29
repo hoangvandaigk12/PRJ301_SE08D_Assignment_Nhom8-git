@@ -119,6 +119,7 @@ public class PurchaseServlet extends HttpServlet {
                             if(odao.insertLine(line)) {
                                 if(dao.updateQuantity(line)) {
                                     session.removeAttribute("cart");
+                                    request.setAttribute("success", "success");
                                     request.getRequestDispatcher("CartServlet").forward(request, response);
                                 }
                             }

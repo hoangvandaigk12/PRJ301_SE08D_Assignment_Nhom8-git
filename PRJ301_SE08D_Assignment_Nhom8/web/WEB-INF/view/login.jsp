@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,28 +14,25 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/login.css">
     </head>
     <body background="images/bg.jpg">
-        <div class="title-box">
-            <h1>Bách Hoa Cốc</h1>
-        </div>
-            
+        <h1 class="title-box">Bách Hoa Cốc</h1>
+
         <form action="LoginServlet" method="POST">
             <div class="login-box">
-                <div style="width: 100%; text-align: center;">
-                    <h1 style="font-size: 50px">Login</h1>
-                </div>
-                
-                <div style="margin-bottom: 25px;">
-                <%
-                    String errMsg = (String) request.getAttribute("errMsg");
-                    if(errMsg != null) {%>
-                    <h2 style="color: red"><%=errMsg%></h2>
-                    <%}
-                %>
-                    <h2>Username</h2>
-                    <input type="text" name="txtName" value="" />
-                    <h2>Password</h2>
-                    <input type="password" name="txtPass" value="" />
-                </div>
+                    <h1>Login</h1>               
+                    <div class="login-item">                       
+                        <c:set var="errMsg" value="${requestScope.errMsg}"/>
+                        <c:if test="${not empty errMsg}">
+                            <h2 style="color: red">Bạn không có quyền truy cập!</h2>
+                        </c:if>
+                        <c:set var="invalidMsg" value="${requestScope.invalidMsg}"/>
+                        <c:if test="${not empty invalidMsg}">
+                            <h2 style="color: red">Tài khoản hoặc mật khẩu không đúng!</h2>
+                        </c:if>
+                        <h2>Username</h2>
+                        <input type="text" name="txtName" value="" />
+                        <h2>Password</h2>
+                        <input type="password" name="txtPass" value="" />
+                    </div>
 
                 <input type="submit" value="Login" name="action"/>
                 <input type="submit" value="Register" name="action" />

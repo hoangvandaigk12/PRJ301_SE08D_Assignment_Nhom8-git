@@ -109,4 +109,28 @@ public class UserDAO implements Serializable{
         }
         return user;
     }
+    
+    public boolean updateUser(UserDTO user) throws SQLException {
+        try {
+            con = DBHelper.makeConnection();
+            if(con != null) {
+                String sql = "Update tblUser Set password=?, fullName=?, "
+                        + "role=?, phone=? "
+                        + "Where userName=?";
+                stm = con.prepareStatement(sql);
+                stm.setString(1, user.getPass());
+                stm.setString(2, user.getFullName());
+                stm.setString(3, user.getRole());
+                stm.setString(4, user.getPhone());
+                stm.setString(5, user.getName());
+                return stm.executeUpdate() > 0;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            closeConnection();
+        }
+        return false;
+    }
 }

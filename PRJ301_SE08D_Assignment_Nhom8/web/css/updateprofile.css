@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: auto;
+}
+.main {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #e9d8f4;
+}
+.main .profile {
+    width: 80%;
+    margin-left: 10%;
+/*    border: 2px solid black;*/
+}
+.profile .success {
+    width: 100%;
+    background-color: #F4FDF0;
+    padding: 15px;
+}
+.success strong {
+    font-size: 25px;
+    color: darkgreen;
+}
+.update-profile {
+    width: 100%;
+/*    margin-top: 50px;*/
+    border-radius: 6px;
+    background-color: antiquewhite;
+    margin-bottom: 50px;
+}
+
+.table-profile {
+    width: 90%;
+    margin-left: 5%;
+}
+.table-profile tr {
+    width: 100%;
+}
+.table-profile h1 {
+/*    border: 1px solid black;*/
+    text-align: center;
+    color: #58257b;
+    padding: 10px;
+}
+.table-profile td {
+    font-size: 20px;
+    color: #58257b; 
+    text-align: center;
+}
+.table-profile input[type=text] {
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 25px;
+    color: #58257b;
+    width: 60%;
+}
+.table-profile input[type=password] {
+    font-size: 25px;
+    text-align: center;
+    padding: 5px; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 25px;
+    color: #58257b;
+    width: 60%;
+}
+.table-profile input[type=submit] {
+    width: 30%;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 25px;
+    color: white;
+    background-color: #58257b;
+}
+.table-profile ::placeholder { /* chạy tốt trên Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red !important;
+    opacity: 1; /* Firefox */
+}
+.table-profile :-ms-input-placeholder { /* chạy trên Internet Explorer 10-11 */
+    color: red !important;
+}
+.table-profile ::-ms-input-placeholder { /* chạy trên Microsoft Edge */
+    color: red !important;
+}

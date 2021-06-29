@@ -14,9 +14,10 @@
         <link rel="stylesheet" type="text/css" media="all" href="css/flowerdetail.css"/>
     </head>
     <body>
-        <form action="CartServlet" method="POST">
-            <div class="main">
-                <%@include file="header.jsp" %>
+
+        <div class="main">
+            <%@include file="header.jsp" %>
+            <form action="CartServlet" method="POST">
                 <c:set var="flower" value="${requestScope.Flower}"/>
                 <div class="body">
                     <c:set var="flower" value="${requestScope.Flower}"/>
@@ -91,8 +92,9 @@
                         <p>${flower.description}</p>
                     </div>
                 </div>
-                <%@include file="footer.jsp" %>
-            </div>
-        </form>
+            </form>
+
+            <%@include file="footer.jsp" %>
+        </div>
     </body>
 </html>

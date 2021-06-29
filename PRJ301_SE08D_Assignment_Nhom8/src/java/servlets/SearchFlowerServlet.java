@@ -6,9 +6,7 @@
 package servlets;
 
 import daos.FlowerDAO;
-import daos.UserDAO;
 import dtos.FlowerDTO;
-import dtos.UserDTO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -22,7 +20,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author AD
  */
-public class LoginServlet extends HttpServlet {
+public class SearchFlowerServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,40 +34,38 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String action = request.getParameter("action");
-        if (action == null) {
-            request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
-        } else if (action.equals("Login")) {
-            login(request, response);
-        } else if (action.equals("Register")) {
-            response.sendRedirect("RegisterServlet");
-        }
-    }
-
-    protected void login(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            HttpSession session = request.getSession();
-            String name = request.getParameter("txtName");
-            String pass = request.getParameter("txtPass");
-            UserDAO dao = new UserDAO();
-            UserDTO user = dao.checkLogin(name, pass);
-            if (user != null) {
-                if (user.getRole().equals("user")) {
-                    session.setAttribute("user", user);
-                    request.getRequestDispatcher("ListHotFlowerServlet").forward(request, response);
+        HttpSession session = request.getSession();
+        if (session.getAttribute("user") != null) {
+            try {
+                String search = request.getParameter("txtSearch");
+                request.setAttribute("searchValue", search);
+                if (search.trim().isEmpty()) {
+                    request.getRequestDispatcher("/WEB-INF/view/searchflower.jsp").forward(request, response);
+                } else {
+                    FlowerDAO dao = new FlowerDAO();
+                    ArrayList<FlowerDTO> list = dao.searchFlower(search.toUpperCase());
+                    request.setAttribute("ListSearch", list);
+                    request.getRequestDispatcher("/WEB-INF/view/searchflower.jsp").forward(request, response);
                 }
-            } else {
-                request.setAttribute("invalidMsg", "UserName or Password is invalid!");
-                request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            request.setAttribute("invalidMsg", "UserName or Password is invalid!");
+        } else {
+            request.setAttribute("errMsg", "Login again!");
             request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
         }
     }
 
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
