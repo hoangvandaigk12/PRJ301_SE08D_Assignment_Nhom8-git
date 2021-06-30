@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/web/WEB-INF/view/header.jsp</file>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/src/java/servlets/UpdateProfileServlet.java</file>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/web/css/updateprofile.css</file>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/web/WEB-INF/view/updateprofile.jsp</file>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/src/java/daos/UserDAO.java</file>
-            <file>file:/E:/MonHoc/Web%20(Hoc%20Lai)/PRJ301_SE08D_Assignment_Nhom8@git/PRJ301_SE08D_Assignment_Nhom8/web/css/header.css</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
